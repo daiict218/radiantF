@@ -8,8 +8,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <TodoInput />
-        <TodoList />
+        <TodoInput dispatch={this.props.dispatch}/>
+        <TodoList todos={this.props.todos} dispatch={this.props.dispatch}/>
       </div>
     );
   }
