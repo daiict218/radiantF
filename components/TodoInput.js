@@ -17,7 +17,7 @@ class TodoInput extends React.Component {
           value={this.state.inputText}
           onChange={this.handleChange.bind(this)}
         />
-        <button>{'Submit'}</button>
+        <button onClick={this.handleSubmit.bind(this)}>{'Submit'}</button>
       </div>
     );
   };
@@ -27,6 +27,12 @@ class TodoInput extends React.Component {
     this.setState({
       inputText: event.target.value
     });
+  };
+
+  handleSubmit(event) {
+    event.preventDefault();
+
+
   }
 }
 
