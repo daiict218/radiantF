@@ -1,28 +1,26 @@
 import React from 'react';
 
-import TextDisplay from './TextDisplay';
-
-class TextInput extends React.Component {
+class TodoInput extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       inputText: ''
     };
-  }
+  };
 
   render() {
     return (
       <div>
         <input
-          placeholder="enter a todo"
+          placeholder={'Enter a todo'}
           value={this.state.inputText}
           onChange={this.handleChange.bind(this)}
         />
-        <TextDisplay text={this.state.inputText}/>
+        <button>{'Submit'}</button>
       </div>
     );
-  }
+  };
 
   //Todo: check why es6 syntax isn't working
   handleChange(event) {
@@ -32,4 +30,4 @@ class TextInput extends React.Component {
   }
 }
 
-export default TextInput;
+export default TodoInput;
