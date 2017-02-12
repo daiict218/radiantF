@@ -14,10 +14,9 @@ let actions = {
   },
 
   deleteTodo: function (id) {
-    return {
-      type: 'DELETE_TODO',
-      id: id
-    }
+    return dispatch => {
+      dispatch({type: 'DELETE_TODO', id: id});
+    };
   }
 };
 
