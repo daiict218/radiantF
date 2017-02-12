@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoItem from './TodoItem';
 
 class TodoList extends React.Component {
   render() {
@@ -10,8 +11,10 @@ class TodoList extends React.Component {
   }
 
   renderList() {
-    return this.props.todos.map(function (todo) {
-      return <li key={todo.id}>{todo.text}</li>;
+    return this.props.todos.map(todo => {
+      return (
+        <TodoItem key={todo.id} todoItem={todo} dispatch={this.props.dispatch}/>
+      );
     });
   };
 }

@@ -15,8 +15,6 @@ class App extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return state;
-}
+const mapStateToProps = state => state;
 
 export default connect(mapStateToProps)(App);
