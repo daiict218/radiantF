@@ -31,7 +31,7 @@ class TodoInput extends React.Component {
     });
   };
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
 
     this.props.dispatch(actions.addTodo(this.state.inputText));
